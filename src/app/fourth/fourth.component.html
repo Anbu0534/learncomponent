@@ -1,0 +1,19 @@
+<input type="text"[(ngModel)]="CountryId">
+<input type="text"[(ngModel)]="CountryName">
+<button (click)="saveCountry()">Save</button>
+
+<table style="width:50%">
+  <tr>
+    <th>CountryId</th>
+    <th>CountryName</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let data of DataList;index as i">
+    <td>{{data.CountryId}}</td>
+    <td>{{data.CountryName}}</td>
+    <td>
+         <button (click)="editCountry(i)"> Edit</button>
+         <button (click)="deleteCountry(i)"> Delete</button>
+    </td>
+  </tr>
+</table>

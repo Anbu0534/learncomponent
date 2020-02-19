@@ -1,0 +1,21 @@
+<div style="background-color: orangered; width:50%">
+
+<p>This is a second Component</p>
+<p> message from child is <span style="font-style: italic;color:royalblue">{{childMessage}}</span></p>
+<Div style="width: 50%; text-align: center;">
+<app-child [receivefromParent]="message4" (messageEvent)="receiveMessage($event)"></app-child>
+</Div>
+
+<div>testing</div>
+<br />
+<br />
+<br />
+</div>
+
+<br />
+<br />
+<br />
+<h1>This is a Second Component!!!</h1>
+<p>Data service Message is  : {{dataMessage}}</p>
+<h1>Post new message</h1>
+<button (click)="postNewMessage()">Submit</button>
